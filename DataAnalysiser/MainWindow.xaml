@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataAnalysiser"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="500" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="425*"/>
+            <ColumnDefinition Width="92*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="MainTitle" Content="データ解析機" HorizontalAlignment="Left" Height="65" Margin="10,10,0,0" VerticalAlignment="Top" Width="430" FontSize="48" FontFamily="Yu Gothic UI Light"/>
+        <TextBox x:Name="numerical_entry" HorizontalAlignment="Left" Height="35" Margin="40,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" TextChanged="textBox_TextChanged" FontSize="21.333" PreviewTextInput="numerical_entry_PreviewTextInput" KeyDown="numerical_entry_KeyDown"/>
+        <Label x:Name="numerical_entry_label" Content="数字を入力してください" HorizontalAlignment="Left" Height="30" Margin="40,350,0,0" VerticalAlignment="Top" Width="200" FontSize="16"/>
+        <Label x:Name="numerical_display" Content="" HorizontalAlignment="Left" Height="115" Margin="10,125,0,0" VerticalAlignment="Top" Width="631" FontSize="16"/>
+
     </Grid>
 </Window>
