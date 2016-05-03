@@ -20,7 +20,7 @@ namespace DataAnalysiser
     /// </summary>
     public partial class MainWindow : Window
     {
-        public double[] data_entry_array = new double[1];
+        public double[] data_entry_array = new double[0];
 
         public MainWindow()
         {
@@ -63,6 +63,13 @@ namespace DataAnalysiser
                 //データ入れとく配列の長さを取得し、配列の長さを一個分増やす
                 Array.Resize(ref data_entry_array, data_entry_array.Length + 1);
                 data_entry_array[data_entry_array.Length - 1] = double.Parse(numerical_entry.Text);
+
+                Array.Sort(data_entry_array);
+                string DataString = string.Join(",", data_entry_array);
+                numerical_entry_show.Text = DataString;
+
+                Console.WriteLine(data_entry_array.Length / 2 + 1);
+                Q2_result.Text = DataAnalysisSystem.calc_q2(data_entry_array).ToString();
 
                 //textboxの中身をリセット
                 numerical_entry.Clear();

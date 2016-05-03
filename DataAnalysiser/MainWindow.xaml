@@ -8,13 +8,18 @@
         Title="MainWindow" Height="500" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="425*"/>
-            <ColumnDefinition Width="92*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="47*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="MainTitle" Content="データ解析機" HorizontalAlignment="Left" Height="65" Margin="10,10,0,0" VerticalAlignment="Top" Width="430" FontSize="48" FontFamily="Yu Gothic UI Light"/>
+        <Label x:Name="MainTitle" Content="データ解析機" HorizontalAlignment="Left" Height="65" Margin="10,10,0,0" VerticalAlignment="Top" Width="430" FontSize="48" FontFamily="Yu Gothic UI Light" Grid.ColumnSpan="2"/>
         <TextBox x:Name="numerical_entry" HorizontalAlignment="Left" Height="35" Margin="40,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" TextChanged="textBox_TextChanged" FontSize="21.333" PreviewTextInput="numerical_entry_PreviewTextInput" KeyDown="numerical_entry_KeyDown"/>
         <Label x:Name="numerical_entry_label" Content="数字を入力してください" HorizontalAlignment="Left" Height="30" Margin="40,350,0,0" VerticalAlignment="Top" Width="200" FontSize="16"/>
-        <Label x:Name="numerical_display" Content="" HorizontalAlignment="Left" Height="115" Margin="10,125,0,0" VerticalAlignment="Top" Width="631" FontSize="16"/>
+
+        <TextBlock x:Name="numerical_entry_show" HorizontalAlignment="Left" Height="240" Margin="40,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontSize="18.667" Grid.ColumnSpan="2"/>
+        <Label x:Name="label_Q2" Content="中央値(Q2):" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="0,350,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
+        <TextBlock x:Name="Q2_result" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="105,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" FontSize="21.333"/>
+
 
     </Grid>
 </Window>
