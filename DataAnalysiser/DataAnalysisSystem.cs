@@ -136,13 +136,14 @@ namespace DataAnalysiser
         //分散計算
         public static double calc_S2(double[] dataarray)
         {
-            double Q2 = calc_q2(dataarray);
+            double Ave = calc_Ave(dataarray);
             double tmp = 0;
             double result;
 
             foreach (double d in dataarray)
             {
-                tmp += Math.Pow(d - Q2, 2);
+                tmp += Math.Pow(d - Ave, 2);
+                Console.WriteLine(tmp);
             }
 
             result = tmp / dataarray.Length;
