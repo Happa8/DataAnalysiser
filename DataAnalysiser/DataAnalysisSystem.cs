@@ -10,6 +10,19 @@ namespace DataAnalysiser
 
     public static class DataAnalysisSystem
     {
+        //平均値計算
+        public static double calc_Ave(double[] dataarray)
+        {
+            double tmp = 0;
+            double result;
+            foreach(double d in dataarray)
+            {
+                tmp += d;
+            }
+
+            result = tmp / dataarray.Length;
+            return result;
+        }
 
         //中央値計算
         public static double calc_q2(double[] dataarray)
