@@ -120,6 +120,22 @@ namespace DataAnalysiser
             return (calc_q3(dataarray) - calc_q1(dataarray)) / 2;
         }
 
+        //分散計算
+        public static double calc_S2(double[] dataarray)
+        {
+            double Q2 = calc_q2(dataarray);
+            double tmp = 0;
+            double result;
+
+            foreach (double d in dataarray)
+            {
+                tmp += Math.Pow(d - Q2, 2);
+            }
+
+            result = tmp / dataarray.Length;
+            return result;
+            
+        }
         
     }
 }
