@@ -113,5 +113,11 @@ namespace DataAnalysiser
         {
             return Q3 - Q1;
         }
+
+        //四分位偏差計算
+        public static double calc_QD(double Q1, double Q3)
+        {
+            return (Q3 - Q1) / 2;
+        }
     }
 }

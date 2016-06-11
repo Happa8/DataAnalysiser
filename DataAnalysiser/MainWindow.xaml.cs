@@ -73,7 +73,7 @@ namespace DataAnalysiser
                 Q1_result.Text = DataAnalysisSystem.calc_q1(data_entry_array).ToString();
                 Q3_result.Text = DataAnalysisSystem.calc_q3(data_entry_array).ToString();
                 IQR_result.Text = DataAnalysisSystem.calc_IQR(DataAnalysisSystem.calc_q1(data_entry_array), DataAnalysisSystem.calc_q3(data_entry_array)).ToString();
-
+                QD_result.Text = DataAnalysisSystem.calc_QD(DataAnalysisSystem.calc_q1(data_entry_array), DataAnalysisSystem.calc_q3(data_entry_array)).ToString();
                      
                 //textboxの中身をリセット
                 numerical_entry.Clear();
