@@ -17,3 +17,6 @@ C#の演習がてら作ったもの。
 ![DataAnalysiser](DataAnalysiser/Resources/DA.jpg)
 ##Licence
 MIT Licence
+
+##Download
+https://github.com/Happa8/DataAnalysiser/releases
