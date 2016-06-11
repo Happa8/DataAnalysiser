@@ -10,7 +10,10 @@ C#の演習がてら作ったもの。
 + 四分位範囲
 + 分散
 + 標準偏差  
-等の計算
+等の計算  
+入力したデータを自動ソートしてくれもする。  
 
+##外観
+![DataAnalysiser](DataAnalysiser/Resources/DA.jpg)
 ##Licence
 MIT Licence
