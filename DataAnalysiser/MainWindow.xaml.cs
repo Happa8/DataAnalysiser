@@ -87,5 +87,25 @@ namespace DataAnalysiser
             S2_result.Text = DataAnalysisSystem.calc_S2(data_entry_array).ToString();
             S_result.Text = DataAnalysisSystem.calc_S(data_entry_array).ToString();
         }
+
+        private void clearData()
+        {
+            Array.Clear(data_entry_array, 0, data_entry_array.Length);
+            Array.Resize(ref data_entry_array, 0);
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            clearData();
+            numerical_entry_show.Text = "";
+            Ave_result.Text = "";
+            Q2_result.Text = "";
+            Q1_result.Text = "";
+            Q3_result.Text = "";
+            IQR_result.Text = "";
+            QD_result.Text = "";
+            S2_result.Text = "";
+            S_result.Text = "";
+        }
     }
 }
