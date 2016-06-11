@@ -107,5 +107,11 @@ namespace DataAnalysiser
 
             return result;
         }
+        
+        //四分位範囲計算
+        public static double calc_IQR(double Q1, double Q3)
+        {
+            return Q3 - Q1;
+        }
     }
 }

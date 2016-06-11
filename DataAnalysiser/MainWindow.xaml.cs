@@ -71,7 +71,10 @@ namespace DataAnalysiser
                 Console.WriteLine(data_entry_array.Length / 2 + 1);
                 Q2_result.Text = DataAnalysisSystem.calc_q2(data_entry_array).ToString();
                 Q1_result.Text = DataAnalysisSystem.calc_q1(data_entry_array).ToString();
-                Q3_result.Text = DataAnalysisSystem.calc_q3(data_entry_array).ToString();     
+                Q3_result.Text = DataAnalysisSystem.calc_q3(data_entry_array).ToString();
+                IQR_result.Text = DataAnalysisSystem.calc_IQR(DataAnalysisSystem.calc_q1(data_entry_array), DataAnalysisSystem.calc_q3(data_entry_array)).ToString();
+
+                     
                 //textboxの中身をリセット
                 numerical_entry.Clear();
             }

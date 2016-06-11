@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataAnalysiser"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="MainWindow" Height="500" Width="909">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120*"/>
-            <ColumnDefinition Width="97*"/>
-            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="410*"/>
+            <ColumnDefinition Width="240*"/>
+            <ColumnDefinition Width="251*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="MainTitle" Content="データ解析機" HorizontalAlignment="Left" Height="65" Margin="10,10,0,0" VerticalAlignment="Top" Width="430" FontSize="48" FontFamily="Yu Gothic UI Light" Grid.ColumnSpan="2"/>
         <TextBox x:Name="numerical_entry" HorizontalAlignment="Left" Height="35" Margin="40,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305" TextChanged="textBox_TextChanged" FontSize="21.333" PreviewTextInput="numerical_entry_PreviewTextInput" KeyDown="numerical_entry_KeyDown"/>
@@ -18,11 +18,13 @@
 
         <TextBlock x:Name="numerical_entry_show" HorizontalAlignment="Left" Height="240" Margin="40,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="601" FontSize="18.667" Grid.ColumnSpan="2"/>
         <Label x:Name="label_Q2" Content="中央値(Q2):" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="0,350,0,0" VerticalAlignment="Top" Width="100" FontSize="16"/>
-        <TextBlock x:Name="Q2_result" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="105,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" FontSize="21.333"/>
+        <TextBlock x:Name="Q2_result" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="105,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" FontSize="21.333"/>
         <Label x:Name="label_Q1" Content="第一四分位数(Q1):" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="0,380,0,0" VerticalAlignment="Top" Width="135" FontSize="14.667"/>
         <TextBlock x:Name="Q1_result" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="135,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" FontSize="16"/>
         <Label x:Name="label_Q3" Content="第三四分位数(Q3):" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="0,410,0,0" VerticalAlignment="Top" Width="135" FontSize="14.667"/>
         <TextBlock x:Name="Q3_result" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="135,415,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" FontSize="16"/>
+        <Label x:Name="label_IQR" Content="四分位範囲(IQR):" Grid.Column="2" HorizontalAlignment="Left" Height="30" Margin="0,380,0,0" VerticalAlignment="Top" Width="135" FontSize="14.667"/>
+        <TextBlock x:Name="IQR_result" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="135,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" FontSize="16"/>
 
 
     </Grid>
