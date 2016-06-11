@@ -58,7 +58,7 @@ namespace DataAnalysiser
 
         private void numerical_entry_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
+            if (e.Key == Key.Enter && numerical_entry.Text != "" && numerical_entry.Text !="-")
             {
                 //データ入れとく配列の長さを取得し、配列の長さを一個分増やす
                 Array.Resize(ref data_entry_array, data_entry_array.Length + 1);
@@ -70,8 +70,7 @@ namespace DataAnalysiser
 
                 Console.WriteLine(data_entry_array.Length / 2 + 1);
                 Q2_result.Text = DataAnalysisSystem.calc_q2(data_entry_array).ToString();
-
-                //textboxの中身をリセット
+                Q1_result.Text = DataAnalysisSystem.calc_q1(data_entry_array).ToString();                //textboxの中身をリセット
                 numerical_entry.Clear();
             }
         }
