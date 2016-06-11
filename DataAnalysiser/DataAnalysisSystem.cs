@@ -109,15 +109,17 @@ namespace DataAnalysiser
         }
         
         //四分位範囲計算
-        public static double calc_IQR(double Q1, double Q3)
+        public static double calc_IQR(double[] dataarray)
         {
-            return Q3 - Q1;
+            return calc_q3(dataarray) - calc_q1(dataarray);
         }
 
         //四分位偏差計算
-        public static double calc_QD(double Q1, double Q3)
+        public static double calc_QD(double[] dataarray)
         {
-            return (Q3 - Q1) / 2;
+            return (calc_q3(dataarray) - calc_q1(dataarray)) / 2;
         }
+
+        
     }
 }
