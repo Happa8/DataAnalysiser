@@ -143,7 +143,6 @@ namespace DataAnalysiser
             foreach (double d in dataarray)
             {
                 tmp += Math.Pow(d - Ave, 2);
-                Console.WriteLine(tmp);
             }
 
             result = tmp / dataarray.Length;
