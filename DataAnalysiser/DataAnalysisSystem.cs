@@ -136,6 +136,15 @@ namespace DataAnalysiser
             return result;
             
         }
+
+        //標準偏差計算
+        public static double calc_S(double[] dataarray)
+        {
+            double S2 = calc_S2(dataarray);
+            double result = Math.Sqrt(S2);
+
+            return result;
+        }
         
     }
 }
