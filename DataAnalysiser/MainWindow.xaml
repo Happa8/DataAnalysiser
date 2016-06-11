@@ -21,6 +21,8 @@
         <TextBlock x:Name="Q2_result" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="105,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" FontSize="21.333"/>
         <Label x:Name="label_Q1" Content="第一四分位数(Q1):" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="0,380,0,0" VerticalAlignment="Top" Width="135" FontSize="14.667"/>
         <TextBlock x:Name="Q1_result" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="135,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" FontSize="16"/>
+        <Label x:Name="label_Q3" Content="第三四分位数(Q3):" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="0,410,0,0" VerticalAlignment="Top" Width="135" FontSize="14.667"/>
+        <TextBlock x:Name="Q3_result" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="135,415,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" FontSize="16"/>
 
 
     </Grid>
