@@ -69,18 +69,23 @@ namespace DataAnalysiser
                 numerical_entry_show.Text = DataString;
 
                 Console.WriteLine(data_entry_array.Length / 2 + 1);
-                Ave_result.Text = DataAnalysisSystem.calc_Ave(data_entry_array).ToString();
-                Q2_result.Text = DataAnalysisSystem.calc_q2(data_entry_array).ToString();
-                Q1_result.Text = DataAnalysisSystem.calc_q1(data_entry_array).ToString();
-                Q3_result.Text = DataAnalysisSystem.calc_q3(data_entry_array).ToString();
-                IQR_result.Text = DataAnalysisSystem.calc_IQR(data_entry_array).ToString();
-                QD_result.Text = DataAnalysisSystem.calc_QD(data_entry_array).ToString();
-                S2_result.Text = DataAnalysisSystem.calc_S2(data_entry_array).ToString();
-                S_result.Text = DataAnalysisSystem.calc_S(data_entry_array).ToString();
+                update();
                      
                 //textboxの中身をリセット
                 numerical_entry.Clear();
             }
+        }
+
+        private void update()
+        {
+            Ave_result.Text = DataAnalysisSystem.calc_Ave(data_entry_array).ToString();
+            Q2_result.Text = DataAnalysisSystem.calc_q2(data_entry_array).ToString();
+            Q1_result.Text = DataAnalysisSystem.calc_q1(data_entry_array).ToString();
+            Q3_result.Text = DataAnalysisSystem.calc_q3(data_entry_array).ToString();
+            IQR_result.Text = DataAnalysisSystem.calc_IQR(data_entry_array).ToString();
+            QD_result.Text = DataAnalysisSystem.calc_QD(data_entry_array).ToString();
+            S2_result.Text = DataAnalysisSystem.calc_S2(data_entry_array).ToString();
+            S_result.Text = DataAnalysisSystem.calc_S(data_entry_array).ToString();
         }
     }
 }
