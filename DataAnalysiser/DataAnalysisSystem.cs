@@ -28,15 +28,26 @@ namespace DataAnalysiser
         public static double calc_q2(double[] dataarray)
         {
             double result;
-            if (dataarray.Length % 2 == 0)
+            if (dataarray.Length >= 3)
             {
-                result = (dataarray[dataarray.Length / 2] + dataarray[(dataarray.Length / 2) - 1]) / 2;
+                if (dataarray.Length % 2 == 0)
+                {
+                    result = (dataarray[dataarray.Length / 2] + dataarray[(dataarray.Length / 2) + 1]) / 2;
 
+                }
+                else
+                {
+                    int arraynum = (dataarray.Length / 2 + 1);
+                    result = dataarray[arraynum];
+                }
+            }
+            else if (dataarray.Length == 2)
+            {
+                result = (dataarray[0] + dataarray[1]) / 2;
             }
             else
             {
-                int arraynum = (dataarray.Length / 2);
-                result = dataarray[arraynum];
+                result = dataarray[0];
             }
             return result;
         }
@@ -58,7 +69,7 @@ namespace DataAnalysiser
                 }
                 else
                 {
-                    result = lowerData[(lowerData.Length / 2) + 1] / 2;
+                    result = lowerData[(lowerData.Length / 2) + 1];
                 }
             }
             else if(lowerData.Length == 2)
@@ -102,7 +113,7 @@ namespace DataAnalysiser
                 }
                 else
                 {
-                    result = upperData[(upperData.Length / 2) + 1] / 2;
+                    result = upperData[(upperData.Length / 2) + 1];
                 }
             }
             else if (upperData.Length == 2)
