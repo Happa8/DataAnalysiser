@@ -11,7 +11,8 @@ C#の演習がてら作ったもの。
 + 分散
 + 標準偏差  
 等の計算  
-入力したデータを自動ソートしてくれもする。  
+入力したデータを自動ソートしてくれもする。
+また、箱ひげ図も表示してくれる  
 
 ##外観
 ![DataAnalysiser](DataAnalysiser/Resources/DA.jpg)
@@ -19,4 +20,4 @@ C#の演習がてら作ったもの。
 MIT Licence
 
 ##Download
-https://github.com/Happa8/DataAnalysiser/releases
+https://github.com/Happa8/DataAnalysiser/releases/latest
