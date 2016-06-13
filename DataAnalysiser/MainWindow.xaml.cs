@@ -88,6 +88,7 @@ namespace DataAnalysiser
             S_result.Text = DataAnalysisSystem.calc_S(data_entry_array).ToString();
             minScale.Text = BoxplotSystem.setScale(data_entry_array)[0].ToString();
             maxScale.Text = BoxplotSystem.setScale(data_entry_array)[1].ToString();
+            OneScaleText.Text = BoxplotSystem.setOneScale(data_entry_array).ToString();
         }
 
         private void clearData()
@@ -110,6 +111,7 @@ namespace DataAnalysiser
             S_result.Text = "";
             minScale.Text = "";
             maxScale.Text = "";
+            OneScaleText.Text = "";
         }
     }
 }

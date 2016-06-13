@@ -57,7 +57,7 @@
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="10" Margin="182,235,0,0" VerticalAlignment="Top" Width="1"/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="10" Margin="202,235,0,0" VerticalAlignment="Top" Width="1"/>
             <Label x:Name="OneScaleLabel" Content="一目盛り:" HorizontalAlignment="Left" Height="25" Margin="62,250,0,0" VerticalAlignment="Top" Width="60" FontSize="10.667"/>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="15" Margin="122,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
+            <TextBlock x:Name="OneScaleText" HorizontalAlignment="Left" Height="15" Margin="122,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
             <TextBlock x:Name="minScale" HorizontalAlignment="Left" Height="10" Margin="22,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="8"/>
             <TextBlock x:Name="maxScale" HorizontalAlignment="Left" Height="10" Margin="172,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="8" TextAlignment="Right"/>
         </Grid>

@@ -45,5 +45,13 @@ namespace DataAnalysiser
             result[1] = maxScale;
             return result;
         }
+
+        public static double setOneScale(double[] dataarray)
+        {
+            double minScale = setScale(dataarray)[0];
+            double maxScale = setScale(dataarray)[1];
+
+            return (Math.Abs(maxScale) + Math.Abs(minScale)) / 10;
+        }
     }
 }
