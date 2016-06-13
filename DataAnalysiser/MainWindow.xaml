@@ -46,7 +46,7 @@
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="29,270,0,0" VerticalAlignment="Top" Width="1"/>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" HorizontalAlignment="Left" Height="20" Margin="229,270,0,0" VerticalAlignment="Top" Width="1"/>
-        <Grid Grid.Column="2" HorizontalAlignment="Left" Height="275" Margin="7,40,0,0" VerticalAlignment="Top" Width="233">
+        <Grid Grid.Column="2" HorizontalAlignment="Left" Height="276" Margin="7,40,0,0" VerticalAlignment="Top" Width="235">
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="10" Margin="42,235,0,0" VerticalAlignment="Top" Width="1"/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="10" Margin="62,235,0,0" VerticalAlignment="Top" Width="1"/>
             <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="10" Margin="82,235,0,0" VerticalAlignment="Top" Width="1"/>
@@ -60,6 +60,9 @@
             <TextBlock x:Name="OneScaleText" HorizontalAlignment="Left" Height="15" Margin="122,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
             <TextBlock x:Name="minScale" HorizontalAlignment="Left" Height="10" Margin="22,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="8"/>
             <TextBlock x:Name="maxScale" HorizontalAlignment="Left" Height="10" Margin="172,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="8" TextAlignment="Right"/>
+            <Canvas HorizontalAlignment="Left" Height="80" Margin="22,120,0,0" VerticalAlignment="Top" Width="200">
+                <Line x:Name="BoxplotMainLine" Stroke="Black" StrokeThickness="2" Width="200" Height="80" Margin="0" RenderTransformOrigin="0.5,0.5" Y1="40" Y2="40"/>
+            </Canvas>
         </Grid>
 
 

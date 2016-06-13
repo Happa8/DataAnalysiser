@@ -89,12 +89,15 @@ namespace DataAnalysiser
             minScale.Text = BoxplotSystem.setScale(data_entry_array)[0].ToString();
             maxScale.Text = BoxplotSystem.setScale(data_entry_array)[1].ToString();
             OneScaleText.Text = BoxplotSystem.setOneScale(data_entry_array).ToString();
+            drawBoxplot(data_entry_array);
         }
 
         private void clearData()
         {
             Array.Clear(data_entry_array, 0, data_entry_array.Length);
             Array.Resize(ref data_entry_array, 0);
+            BoxplotMainLine.X1 = 0;
+            BoxplotMainLine.X2 = 0;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -112,6 +115,23 @@ namespace DataAnalysiser
             minScale.Text = "";
             maxScale.Text = "";
             OneScaleText.Text = "";
+        }
+
+        public void drawBoxplot(double[] dataarray)
+        {
+            double oneScale = BoxplotSystem.setOneScale(dataarray);
+            double maxValue = dataarray[dataarray.Length - 1];
+            double minValue = dataarray[0];
+            double maxScale = BoxplotSystem.setScale(dataarray)[1];
+            double minScale = BoxplotSystem.setScale(dataarray)[0];
+
+            double leftMargin = (minValue - minScale) / oneScale * 20;
+            double rightMargin = (maxScale - maxValue) / oneScale * 20;
+            double width = (maxValue - minValue) / oneScale * 20;
+
+            BoxplotMainLine.X1 = leftMargin;
+            BoxplotMainLine.X2 = 200 - rightMargin;
+
         }
     }
 }
