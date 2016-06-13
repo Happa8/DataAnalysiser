@@ -86,6 +86,8 @@ namespace DataAnalysiser
             QD_result.Text = DataAnalysisSystem.calc_QD(data_entry_array).ToString();
             S2_result.Text = DataAnalysisSystem.calc_S2(data_entry_array).ToString();
             S_result.Text = DataAnalysisSystem.calc_S(data_entry_array).ToString();
+            minScale.Text = BoxplotSystem.setScale(data_entry_array)[0].ToString();
+            maxScale.Text = BoxplotSystem.setScale(data_entry_array)[1].ToString();
         }
 
         private void clearData()
@@ -106,6 +108,8 @@ namespace DataAnalysiser
             QD_result.Text = "";
             S2_result.Text = "";
             S_result.Text = "";
+            minScale.Text = "";
+            maxScale.Text = "";
         }
     }
 }
