@@ -98,6 +98,10 @@ namespace DataAnalysiser
             Array.Resize(ref data_entry_array, 0);
             BoxplotMainLine.X1 = 0;
             BoxplotMainLine.X2 = 0;
+            BoxplotQ1Line.X1 = 0;
+            BoxplotQ1Line.X2 = 0;
+            BoxplotQ3Line.X1 = 0;
+            BoxplotQ3Line.X2 = 0;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -131,6 +135,11 @@ namespace DataAnalysiser
 
             BoxplotMainLine.X1 = leftMargin;
             BoxplotMainLine.X2 = 200 - rightMargin;
+
+            BoxplotQ1Line.X1 = leftMargin;
+            BoxplotQ1Line.X2 = leftMargin;
+            BoxplotQ3Line.X1 = 200 - rightMargin;
+            BoxplotQ3Line.X2 = 200 - rightMargin;
 
         }
     }
