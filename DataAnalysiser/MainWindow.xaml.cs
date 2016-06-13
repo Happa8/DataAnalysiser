@@ -98,10 +98,23 @@ namespace DataAnalysiser
             Array.Resize(ref data_entry_array, 0);
             BoxplotMainLine.X1 = 0;
             BoxplotMainLine.X2 = 0;
-            BoxplotQ1Line.X1 = 0;
-            BoxplotQ1Line.X2 = 0;
-            BoxplotQ3Line.X1 = 0;
-            BoxplotQ3Line.X2 = 0;
+            BoxplotQ0Line.X1 = 0;
+            BoxplotQ0Line.X2 = 0;
+            BoxplotQ4Line.X1 = 0;
+            BoxplotQ4Line.X2 = 0;
+            BoxplotQ2Line.X1 = 0;
+            BoxplotQ2Line.X2 = 0;
+            BoxplotAveLineLong.X1 = 0;
+            BoxplotAveLineLong.X2 = 0;
+            BoxplotAveLineSide.X1 = 0;
+            BoxplotAveLineSide.X2 = 0;
+
+            Point point = new Point(0,0);
+            PointCollection boxplotBoxPoints = new PointCollection();
+            boxplotBoxPoints.Add(point);
+            BoxplotMainBox.Points = boxplotBoxPoints;
+
+            BoxplotCanvas.Visibility = Visibility.Hidden;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -128,19 +141,45 @@ namespace DataAnalysiser
             double minValue = dataarray[0];
             double maxScale = BoxplotSystem.setScale(dataarray)[1];
             double minScale = BoxplotSystem.setScale(dataarray)[0];
+            double q1 = DataAnalysisSystem.calc_q1(dataarray);
+            double q2 = DataAnalysisSystem.calc_q2(dataarray);
+            double q3 = DataAnalysisSystem.calc_q3(dataarray);
+            double ave = DataAnalysisSystem.calc_Ave(dataarray);
 
             double leftMargin = (minValue - minScale) / oneScale * 20;
             double rightMargin = (maxScale - maxValue) / oneScale * 20;
             double width = (maxValue - minValue) / oneScale * 20;
+            double boxleft = (q1 - minScale) / oneScale * 20;
+            double boxright = (maxScale - q3) / oneScale * 20;
+            double boxq2 = (q2 - minScale) / oneScale * 20;
+            double boxAve = (ave - minScale) / oneScale * 20;
 
             BoxplotMainLine.X1 = leftMargin;
             BoxplotMainLine.X2 = 200 - rightMargin;
 
-            BoxplotQ1Line.X1 = leftMargin;
-            BoxplotQ1Line.X2 = leftMargin;
-            BoxplotQ3Line.X1 = 200 - rightMargin;
-            BoxplotQ3Line.X2 = 200 - rightMargin;
+            BoxplotQ0Line.X1 = leftMargin;
+            BoxplotQ0Line.X2 = leftMargin;
+            BoxplotQ4Line.X1 = 200 - rightMargin;
+            BoxplotQ4Line.X2 = 200 - rightMargin;
+            BoxplotQ2Line.X1 = boxq2;
+            BoxplotQ2Line.X2 = boxq2;
+            BoxplotAveLineLong.X1 = boxAve;
+            BoxplotAveLineLong.X2 = boxAve;
+            BoxplotAveLineSide.X1 = boxAve - 5;
+            BoxplotAveLineSide.X2 = boxAve + 5;
 
+            Point pointUpLeft = new Point(boxleft, 30);
+            Point pointUpRight = new Point(200 - boxright, 30);
+            Point pointDownRight = new Point(200 - boxright, 50);
+            Point pointDownLeft = new Point(boxleft, 50);
+            PointCollection boxplotBoxPoints = new PointCollection();
+            boxplotBoxPoints.Add(pointUpLeft);
+            boxplotBoxPoints.Add(pointUpRight);
+            boxplotBoxPoints.Add(pointDownRight);
+            boxplotBoxPoints.Add(pointDownLeft);
+            BoxplotMainBox.Points = boxplotBoxPoints;
+
+            BoxplotCanvas.Visibility = Visibility.Visible;
         }
     }
 }

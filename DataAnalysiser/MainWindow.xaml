@@ -60,11 +60,14 @@
             <TextBlock x:Name="OneScaleText" HorizontalAlignment="Left" Height="15" Margin="122,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
             <TextBlock x:Name="minScale" HorizontalAlignment="Left" Height="10" Margin="22,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="8"/>
             <TextBlock x:Name="maxScale" HorizontalAlignment="Left" Height="10" Margin="172,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="8" TextAlignment="Right"/>
-            <Canvas HorizontalAlignment="Left" Height="80" Margin="22,120,0,0" VerticalAlignment="Top" Width="200">
+            <Canvas x:Name="BoxplotCanvas" HorizontalAlignment="Left" Height="80" Margin="22,120,0,0" VerticalAlignment="Top" Width="200" Visibility="Hidden">
                 <Line x:Name="BoxplotMainLine" Stroke="Black" StrokeThickness="2" Width="200" Height="80" Margin="0" RenderTransformOrigin="0.5,0.5" Y1="40" Y2="40"/>
-                <Line x:Name="BoxplotQ1Line" Stroke="Black" Width="200" Height="80" Margin="0" RenderTransformOrigin="0.5,0.5" Y1="30" Y2="50"/>
-                <Line x:Name="BoxplotQ3Line" Stroke="Black" Width="200" Height="80" Margin="0" RenderTransformOrigin="0.5,0.5" Y1="30" Y2="50"/>
-
+                <Line x:Name="BoxplotQ0Line" Stroke="Black" Width="200" Height="80" Margin="0" RenderTransformOrigin="0.5,0.5" Y1="30" Y2="50"/>
+                <Line x:Name="BoxplotQ4Line" Stroke="Black" Width="200" Height="80" Margin="0" RenderTransformOrigin="0.5,0.5" Y1="30" Y2="50"/>
+                <Polygon x:Name="BoxplotMainBox" Points="0,0 " Fill="White" Stroke="Black" Panel.ZIndex="1"></Polygon>
+                <Line x:Name="BoxplotQ2Line" Stroke="Black" Width="200" Height="80" Margin="0" RenderTransformOrigin="0.5,0.5" Y1="30" Y2="50" Panel.ZIndex="2"/>
+                <Line x:Name="BoxplotAveLineLong" Stroke="Black" Width="200" Height="80" Margin="0" RenderTransformOrigin="0.5,0.5" Y1="35" Y2="45" StrokeThickness="2" Panel.ZIndex="2"/>
+                <Line x:Name="BoxplotAveLineSide" Stroke="Black" Width="200" Height="80" Margin="0" RenderTransformOrigin="0.5,0.5" Y1="40" Y2="40" StrokeThickness="2" Panel.ZIndex="2"/>
             </Canvas>
         </Grid>
 
